@@ -33,14 +33,6 @@ jobs:
     run: chmod +x ./configure
   - name: make
     run: make
-  - name: Make file  commit
-    run: |
-        echo $(date) >> tick.txt
-        git config --global user.email "2563043733@qq.com"
-        git config --global user.name "ilikui"
-        git add tick.txt
-        git commit -m "Commit file  schedule counts"
-        git status
   - name: make makefile
     run: |
 
@@ -48,7 +40,15 @@ jobs:
       make makefile
       echo "载入数据"
       echo github_user_name: ${{ github.repository_owner }}
-      echo gif_out_path: ./github_user_name/gen/hello-.o     
+      echo gif_out_path: ./github_user_name/gen/hello-.o 
+  - name: Make file  commit
+    run: |
+        echo $(date) >> tick.txt
+        git config --global user.email "2563043733@qq.com"
+        git config --global user.name "ilikui"
+        git add tick.txt
+        git commit -m "Commit file  schedule counts"
+        git status    
   - name: Push All
     run: |
         git diff 
