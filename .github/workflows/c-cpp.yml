@@ -41,6 +41,11 @@ jobs:
       echo "载入数据"
       echo github_user_name: ${{ github.repository_owner }}
       echo gif_out_path: ./github_user_name/gen/hello.o 
+
+
+  - name: Execute
+    run: |
+        ./hello.o
   - name: Make file  commit
     run: |
         echo $(date) >> tick.txt
