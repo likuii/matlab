@@ -36,4 +36,16 @@ jobs:
   - name: make makefile
     run: |
       make makefile
-      ./hello.o
+    with:
+        github_user_name: ${{ github.repository_owner }}
+        gif_out_path: ./gen/hello-.o
+  - name: Push All
+    run: |
+        git diff 
+        git add .
+        git config --global user.email "2563043733@qq.com"
+        git config --global user.name "ilikui"
+        git commit -m "commit "
+        git push
+
+   
