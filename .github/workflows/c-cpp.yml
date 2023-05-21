@@ -36,9 +36,9 @@ jobs:
   - name: make makefile
     run: |
       make makefile
-    with:
-        github_user_name: ${{ github.repository_owner }}
-        gif_out_path: ./gen/hello-.o
+      with:
+          github_user_name: ${{ github.repository_owner }}
+          gif_out_path: ./gen/hello-.o
   - name: Push All
     run: |
         git diff 
