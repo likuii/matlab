@@ -39,8 +39,8 @@ jobs:
       echo "编译开始"
       make makefile
       echo "载入数据"
-      github_user_name: ${{ github.repository_owner }}
-      gif_out_path: ./gen/hello-.o     
+      echo github_user_name: ${{ github.repository_owner }}
+      echo gif_out_path: ./gen/hello-.o     
   - name: Push All
     run: |
         git diff 
