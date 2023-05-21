@@ -4,6 +4,23 @@ on:
  pull_request:
   branches: [ main ]
 
+# 开启执行权限
+permissions:
+  actions: write
+  checks:  write
+  contents: write
+  deployments: write
+  id-token: write
+  issues: write
+  discussions: write
+  packages: write
+  pages: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
+        
+# 运行job
 jobs:
  build-and-test:
   runs-on: ubuntu-latest
