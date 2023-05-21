@@ -45,7 +45,7 @@ jobs:
 
   - name: Execute
     run: |
-        ./hello.o
+        ./hello
   - name: Make file  commit
     run: |
         echo $(date) >> tick.txt
