@@ -39,6 +39,9 @@ jobs:
       echo "编译开始"
       make makefile
       echo "载入数据"
+      mkdir gen
+      cd gen
+      touch hello.c
       echo github_user_name: ${{ github.repository_owner }}
       echo gif_out_path: ./github_user_name/gen/hello.o 
 
