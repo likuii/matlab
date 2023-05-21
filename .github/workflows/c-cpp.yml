@@ -35,10 +35,12 @@ jobs:
     run: make
   - name: make makefile
     run: |
+
+      echo "编译开始"
       make makefile
-      with:
-          github_user_name: ${{ github.repository_owner }}
-          gif_out_path: ./gen/hello-.o
+      echo "载入数据"
+      github_user_name: ${{ github.repository_owner }}
+      gif_out_path: ./gen/hello-.o     
   - name: Push All
     run: |
         git diff 
