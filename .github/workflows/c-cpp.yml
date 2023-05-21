@@ -29,7 +29,8 @@ jobs:
   - name: install cppunit
     run: sudo apt install -y libcppunit-dev
   - name: configure
-    run: ./configure
+  # 加上权限，否则不能运行
+    run: chmod +x ./configure
   - name: make
     run: make
   - name: make test
