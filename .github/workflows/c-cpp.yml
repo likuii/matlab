@@ -34,4 +34,6 @@ jobs:
   - name: make
     run: make
   - name: make makefile
-    run: make makefile
+    run: |
+      make makefile
+      ./hello.o
